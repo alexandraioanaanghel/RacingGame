@@ -39,6 +39,33 @@ public class App
         System.out.println("Total traveled distance: " + carReference2.totalTraveledDistance);
         System.out.println("Damaged: " + carReference2.damaged);
 
+        System.out.println("");
+
+        System.out.println("Initial name for car1: " + carReference.name);
+        carReference.name = "Ford";
+        System.out.println("Changed name for car1: " + carReference.name);
+
+
+        System.out.println("");
+
+        carReference = new Car();
+        System.out.println("Name of new car: " + carReference.name);
+        carReference.name = "BMW";
+
+        System.out.println("");
+
+        carReference = carReference2;
+        System.out.println("Name of car referenced from 2 variables. carReference:  " + carReference.name);
+        System.out.println("Name of car referenced from 2 variables. carReference2: " + carReference2.name);
+
+        System.out.println("");
+
+        carReference2.name = "Opel";
+        System.out.println("Updated of car referenced from 2 variables. carReference:  " + carReference.name);
+        System.out.println("Updated of car referenced from 2 variables. carReference2: " + carReference2.name);
+
+       // carReference2 = null; //nu afecteaza si carReference
+       // System.out.println(carReference.name);
 
     }
 }
