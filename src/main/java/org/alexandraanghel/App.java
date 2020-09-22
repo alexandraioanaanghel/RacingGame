@@ -55,31 +55,36 @@ public class App
 
         System.out.println("");
 
-        System.out.println("Initial name for car1: " + carReference.name);
-        carReference.name = "Ford";
-        System.out.println("Changed name for car1: " + carReference.name);
+        double distanceForCar1 = carReference.accelerate(60, 1);
+        System.out.println("Distance for car1: " + distanceForCar1);
+        double distanceForCar2 = carReference2.accelerate(100,1);
+        System.out.println("Distance for car2: " + distanceForCar2);
 
-
-        System.out.println("");
-
-        carReference = new Car();
-        System.out.println("Name of new car: " + carReference.name);
-        carReference.name = "BMW";
-
-        System.out.println("");
-
-        carReference = carReference2;
-        System.out.println("Name of car referenced from 2 variables. carReference:  " + carReference.name);
-        System.out.println("Name of car referenced from 2 variables. carReference2: " + carReference2.name);
-
-        System.out.println("");
-
-        carReference2.name = "Opel";
-        System.out.println("Updated of car referenced from 2 variables. carReference:  " + carReference.name);
-        System.out.println("Updated of car referenced from 2 variables. carReference2: " + carReference2.name);
-
-       // carReference2 = null; //nu afecteaza si carReference
-       // System.out.println(carReference.name);
+//        System.out.println("Initial name for car1: " + carReference.name);
+//        carReference.name = "Ford";
+//        System.out.println("Changed name for car1: " + carReference.name);
+//
+//
+//        System.out.println("");
+//
+//        carReference = new Car();
+//        System.out.println("Name of new car: " + carReference.name);
+//        carReference.name = "BMW";
+//
+//        System.out.println("");
+//
+//        carReference = carReference2;
+//        System.out.println("Name of car referenced from 2 variables. carReference:  " + carReference.name);
+//        System.out.println("Name of car referenced from 2 variables. carReference2: " + carReference2.name);
+//
+//        System.out.println("");
+//
+//        carReference2.name = "Opel";
+//        System.out.println("Updated of car referenced from 2 variables. carReference:  " + carReference.name);
+//        System.out.println("Updated of car referenced from 2 variables. carReference2: " + carReference2.name);
+//
+//       // carReference2 = null; //nu afecteaza si carReference
+//       // System.out.println(carReference.name);
 
     }
 }
