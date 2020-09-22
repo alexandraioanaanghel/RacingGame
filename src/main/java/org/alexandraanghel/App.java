@@ -8,11 +8,11 @@ public class App
        Car carReference = new Car();
        carReference.name = "Dacia";
        carReference.maxSpeed = 180;
-       carReference.fuelLevel = 40;
+       carReference.fuelLevel = 70;
        carReference.color = "Red";
-       carReference.damaged = true;
+       carReference.damaged = false;
        carReference.doorCount = 4;
-       carReference.mileage = 8.5;
+       carReference.mileage = 10;
        carReference.totalTraveledDistance = 0;
 
        Engine engine1 = new Engine();
@@ -39,7 +39,10 @@ public class App
         Car carReference2 = new Car();
         carReference2.name = "Audi";
         carReference2.mileage = 11.5;
-        carReference2.fuelLevel = 300;
+        carReference2.fuelLevel = 80;
+        carReference2.maxSpeed = 300;
+        carReference2.damaged = false;
+
 
         carReference2.engine = new Engine();
         carReference2.engine.manufacturer = "Audi";
@@ -56,7 +59,7 @@ public class App
 
         System.out.println("");
 
-        double distanceForCar1 = carReference.accelerate(60, 1);
+        double distanceForCar1 = carReference.accelerate(130, 1);
         System.out.println("Distance for car1: " + distanceForCar1);
 
         System.out.println("");
@@ -66,10 +69,10 @@ public class App
 
         System.out.println("");
 
-        System.out.println("Engine name befor repair: " + carReference.engine.manufacturer);
+        System.out.println("Engine manufacturer before repair: " + carReference.engine.manufacturer);
         Mechanic mechanic = new Mechanic();
         mechanic.repair(carReference);
-        System.out.println("Engine name befor repair: " + carReference.engine.manufacturer);
+        System.out.println("Engine manufacture after repair: " + carReference.engine.manufacturer);
 
 
 
