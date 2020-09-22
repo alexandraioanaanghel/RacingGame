@@ -15,6 +15,11 @@ public class App
        carReference.mileage = 8.5;
        carReference.totalTraveledDistance = 0;
 
+       Engine engine1 = new Engine();
+       engine1.manufacturer = "Dacia";
+       engine1.capacity = 3000;
+       carReference.engine = engine1;
+
         System.out.println("Properties of car " + carReference.name);
         System.out.println("Max speed: " + carReference.maxSpeed);
         System.out.println("Fuel level: " + carReference.fuelLevel);
@@ -23,12 +28,21 @@ public class App
         System.out.println("Door count: " + carReference.doorCount);
         System.out.println("Total traveled distance: " + carReference.totalTraveledDistance);
         System.out.println("Damaged: " + carReference.damaged);
+        System.out.println("Engine capacity: " + carReference.engine.capacity);
+        System.out.println("Engine manufacturer: " + carReference.engine.manufacturer);
+
+        engine1.capacity = 4000;
+        System.out.println("Engine capacity after update: " + carReference.engine.capacity);
 
         System.out.println("");
 
         Car carReference2 = new Car();
         carReference2.name = "Audi";
         carReference2.mileage = 11.5;
+
+        carReference2.engine = new Engine();
+        carReference2.engine.manufacturer = "Audi";
+        carReference2.engine.capacity = 5000;
 
         System.out.println("Properties of car " + carReference2.name);
         System.out.println("Max speed: " + carReference2.maxSpeed);
