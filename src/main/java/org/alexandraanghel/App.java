@@ -39,6 +39,7 @@ public class App
         Car carReference2 = new Car();
         carReference2.name = "Audi";
         carReference2.mileage = 11.5;
+        carReference2.fuelLevel = 300;
 
         carReference2.engine = new Engine();
         carReference2.engine.manufacturer = "Audi";
@@ -57,8 +58,20 @@ public class App
 
         double distanceForCar1 = carReference.accelerate(60, 1);
         System.out.println("Distance for car1: " + distanceForCar1);
+
+        System.out.println("");
+
         double distanceForCar2 = carReference2.accelerate(100,1);
         System.out.println("Distance for car2: " + distanceForCar2);
+
+        System.out.println("");
+
+        System.out.println("Engine name befor repair: " + carReference.engine.manufacturer);
+        Mechanic mechanic = new Mechanic();
+        mechanic.repair(carReference);
+        System.out.println("Engine name befor repair: " + carReference.engine.manufacturer);
+
+
 
 //        System.out.println("Initial name for car1: " + carReference.name);
 //        carReference.name = "Ford";
