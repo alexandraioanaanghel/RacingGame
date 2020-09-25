@@ -102,5 +102,23 @@ public class App
 //       // carReference2 = null; //nu afecteaza si carReference
 //       // System.out.println(carReference.name);
 
+
+//        System.out.println("");
+//
+//        System.out.println("Modulo example: ");
+//        //restul impartirii
+//        System.out.println(4 % 2);
+//        System.out.println(4 % 3);
+//
+//        int a = 4;
+//
+//        if (a % 2 ==0)
+//        {
+//            System.out.println("a is an even number");
+//        }
+//        else
+//        {
+//            System.out.println("a is an odd number");
+//        }
     }
 }
