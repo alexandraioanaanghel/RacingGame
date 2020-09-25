@@ -5,8 +5,19 @@ public class App
     public static void main( String[] args )
     {
 
-        Game game = new Game();
-        game.start();
+       Game game = new Game();
+       game.start();
+//
+//        Vehicle vehicle1 = new Vehicle();
+//        vehicle1.name = "Dacia";
+//
+//        Vehicle vehicle2 = new Vehicle();
+//        vehicle2.name = "Audi";
+//
+//        System.out.println("Total count from vehicle" + vehicle1.name + ": " + vehicle1.totalVehicleCount);
+//        System.out.println("Total count from vehicle" + vehicle2.name + ": " + vehicle2.totalVehicleCount);
+//        System.out.println("Total count from Vehicle class: " + Vehicle.totalVehicleCount);
+
 
 //        Engine autoVhicleEngine = new Engine();
 //        autoVhicleEngine.manufacturer ="VW";

@@ -2,6 +2,9 @@ package org.alexandraanghel;
 
 public class Vehicle {
 
+    //class variable/ static variable = o sg val in toata app
+    static int totalVehicleCount;
+    
     // instance variables
     String name;
     double fuelLevel;
@@ -13,7 +16,7 @@ public class Vehicle {
 
     public Vehicle()
     {
-
+        totalVehicleCount++;
     }
 
     public Vehicle(String name, double fuelLevel, double mileage, double totalTraveledDistance, double maxSpeed) {
