@@ -4,8 +4,17 @@ public class App
 {
     public static void main( String[] args )
     {
+        Engine autoVhicleEngine = new Engine();
+        autoVhicleEngine.manufacturer ="VW";
+        autoVhicleEngine.capacity = 3000;
+        AutoVehicle autoVehicle = new AutoVehicle(autoVhicleEngine);
+
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "Dacia";
+        engine1.capacity = 1000;
+
         //o instanta a clasei Car
-       Car carReference = new Car();
+       Car carReference = new Car(engine1);
        carReference.name = "Dacia";
        carReference.maxSpeed = 180;
        carReference.fuelLevel = 70;
@@ -14,11 +23,6 @@ public class App
        carReference.doorCount = 4;
        carReference.mileage = 10;
        carReference.totalTraveledDistance = 0;
-
-       Engine engine1 = new Engine();
-       engine1.manufacturer = "Dacia";
-       engine1.capacity = 3000;
-       carReference.engine = engine1;
 
         System.out.println("Properties of car " + carReference.name);
         System.out.println("Max speed: " + carReference.maxSpeed);
@@ -36,7 +40,7 @@ public class App
 
         System.out.println("");
 
-        Car carReference2 = new Car();
+        Car carReference2 = new Car(new Engine());
         carReference2.name = "Audi";
         carReference2.mileage = 11.5;
         carReference2.fuelLevel = 80;
@@ -44,7 +48,7 @@ public class App
         carReference2.damaged = false;
 
 
-        carReference2.engine = new Engine();
+        //carReference2.engine = new Engine();
         carReference2.engine.manufacturer = "Audi";
         carReference2.engine.capacity = 5000;
 

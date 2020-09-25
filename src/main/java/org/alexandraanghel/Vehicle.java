@@ -11,6 +11,19 @@ public class Vehicle {
     boolean damaged;
     String color;
 
+    public Vehicle()
+    {
+
+    }
+
+    public Vehicle(String name, double fuelLevel, double mileage, double totalTraveledDistance, double maxSpeed) {
+        this.name = name;
+        this.fuelLevel = fuelLevel;
+        this.mileage = mileage;
+        this.totalTraveledDistance = totalTraveledDistance;
+        this.maxSpeed = maxSpeed;
+    }
+
     public double accelerate(double speed, double durationInHours)
     {
         if (fuelLevel <=0 || damaged)
