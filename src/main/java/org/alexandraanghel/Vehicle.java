@@ -1,5 +1,7 @@
 package org.alexandraanghel;
 
+import java.time.LocalDate;
+
 public class Vehicle {
 
     //class variable/ static variable = o sg val in toata app
@@ -13,6 +15,8 @@ public class Vehicle {
     double maxSpeed;
     boolean damaged;
     String color;
+
+    LocalDate manufacturingDate = LocalDate.now().minusWeeks(2).plusDays(5);
 
     public Vehicle()
     {
