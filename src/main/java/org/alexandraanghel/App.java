@@ -4,81 +4,85 @@ public class App
 {
     public static void main( String[] args )
     {
-        Engine autoVhicleEngine = new Engine();
-        autoVhicleEngine.manufacturer ="VW";
-        autoVhicleEngine.capacity = 3000;
-        AutoVehicle autoVehicle = new AutoVehicle(autoVhicleEngine);
 
-        Engine engine1 = new Engine();
-        engine1.manufacturer = "Dacia";
-        engine1.capacity = 1000;
+        Game game = new Game();
+        game.start();
 
-        //o instanta a clasei Car
-       Car carReference = new Car(engine1);
-       carReference.name = "Dacia";
-       carReference.maxSpeed = 180;
-       carReference.fuelLevel = 70;
-       carReference.color = "Red";
-       carReference.damaged = false;
-       carReference.doorCount = 4;
-       carReference.mileage = 10;
-       carReference.totalTraveledDistance = 0;
-
-        System.out.println("Properties of car " + carReference.name);
-        System.out.println("Max speed: " + carReference.maxSpeed);
-        System.out.println("Fuel level: " + carReference.fuelLevel);
-        System.out.println("Mileage: " + carReference.mileage);
-        System.out.println("Color: " + carReference.color);
-        System.out.println("Door count: " + carReference.doorCount);
-        System.out.println("Total traveled distance: " + carReference.totalTraveledDistance);
-        System.out.println("Damaged: " + carReference.damaged);
-        System.out.println("Engine capacity: " + carReference.engine.capacity);
-        System.out.println("Engine manufacturer: " + carReference.engine.manufacturer);
-
-        engine1.capacity = 4000;
-        System.out.println("Engine capacity after update: " + carReference.engine.capacity);
-
-        System.out.println("");
-
-        Car carReference2 = new Car(new Engine());
-        carReference2.name = "Audi";
-        carReference2.mileage = 11.5;
-        carReference2.fuelLevel = 80;
-        carReference2.maxSpeed = 300;
-        carReference2.damaged = false;
-
-
-        //carReference2.engine = new Engine();
-        carReference2.engine.manufacturer = "Audi";
-        carReference2.engine.capacity = 5000;
-
-        System.out.println("Properties of car " + carReference2.name);
-        System.out.println("Max speed: " + carReference2.maxSpeed);
-        System.out.println("Fuel level: " + carReference2.fuelLevel);
-        System.out.println("Mileage: " + carReference2.mileage);
-        System.out.println("Color: " + carReference2.color);
-        System.out.println("Door count: " + carReference2.doorCount);
-        System.out.println("Total traveled distance: " + carReference2.totalTraveledDistance);
-        System.out.println("Damaged: " + carReference2.damaged);
-
-        System.out.println("");
-
-        double distanceForCar1 = carReference.accelerate(130, 1);
-        System.out.println("Distance for car1: " + distanceForCar1);
-
-        System.out.println("");
-
-        double distanceForCar2 = carReference2.accelerate(100,1);
-        System.out.println("Distance for car2: " + distanceForCar2);
-
-        System.out.println("");
-
-        System.out.println("Engine manufacturer before repair: " + carReference.engine.manufacturer);
-        Mechanic mechanic = new Mechanic();
-        mechanic.repair(carReference);
-        System.out.println("Engine manufacture after repair: " + carReference.engine.manufacturer);
-
-
+//        Engine autoVhicleEngine = new Engine();
+//        autoVhicleEngine.manufacturer ="VW";
+//        autoVhicleEngine.capacity = 3000;
+//        AutoVehicle autoVehicle = new AutoVehicle(autoVhicleEngine);
+//
+//        Engine engine1 = new Engine();
+//        engine1.manufacturer = "Dacia";
+//        engine1.capacity = 1000;
+//
+//        //o instanta a clasei Car
+//       Car carReference = new Car(engine1);
+//       carReference.name = "Dacia";
+//       carReference.maxSpeed = 180;
+//       carReference.fuelLevel = 70;
+//       carReference.color = "Red";
+//       carReference.damaged = false;
+//       carReference.doorCount = 4;
+//       carReference.mileage = 10;
+//       carReference.totalTraveledDistance = 0;
+//
+//        System.out.println("Properties of car " + carReference.name);
+//        System.out.println("Max speed: " + carReference.maxSpeed);
+//        System.out.println("Fuel level: " + carReference.fuelLevel);
+//        System.out.println("Mileage: " + carReference.mileage);
+//        System.out.println("Color: " + carReference.color);
+//        System.out.println("Door count: " + carReference.doorCount);
+//        System.out.println("Total traveled distance: " + carReference.totalTraveledDistance);
+//        System.out.println("Damaged: " + carReference.damaged);
+//        System.out.println("Engine capacity: " + carReference.engine.capacity);
+//        System.out.println("Engine manufacturer: " + carReference.engine.manufacturer);
+//
+//        engine1.capacity = 4000;
+//        System.out.println("Engine capacity after update: " + carReference.engine.capacity);
+//
+//        System.out.println("");
+//
+//        Car carReference2 = new Car(new Engine());
+//        carReference2.name = "Audi";
+//        carReference2.mileage = 11.5;
+//        carReference2.fuelLevel = 80;
+//        carReference2.maxSpeed = 300;
+//        carReference2.damaged = false;
+//
+//
+//        //carReference2.engine = new Engine();
+//        carReference2.engine.manufacturer = "Audi";
+//        carReference2.engine.capacity = 5000;
+//
+//        System.out.println("Properties of car " + carReference2.name);
+//        System.out.println("Max speed: " + carReference2.maxSpeed);
+//        System.out.println("Fuel level: " + carReference2.fuelLevel);
+//        System.out.println("Mileage: " + carReference2.mileage);
+//        System.out.println("Color: " + carReference2.color);
+//        System.out.println("Door count: " + carReference2.doorCount);
+//        System.out.println("Total traveled distance: " + carReference2.totalTraveledDistance);
+//        System.out.println("Damaged: " + carReference2.damaged);
+//
+//        System.out.println("");
+//
+//        double distanceForCar1 = carReference.accelerate(130, 1);
+//        System.out.println("Distance for car1: " + distanceForCar1);
+//
+//        System.out.println("");
+//
+//        double distanceForCar2 = carReference2.accelerate(100,1);
+//        System.out.println("Distance for car2: " + distanceForCar2);
+//
+//        System.out.println("");
+//
+//        System.out.println("Engine manufacturer before repair: " + carReference.engine.manufacturer);
+//        Mechanic mechanic = new Mechanic();
+//        mechanic.repair(carReference);
+//        System.out.println("Engine manufacture after repair: " + carReference.engine.manufacturer);
+//
+//
 
 //        System.out.println("Initial name for car1: " + carReference.name);
 //        carReference.name = "Ford";
