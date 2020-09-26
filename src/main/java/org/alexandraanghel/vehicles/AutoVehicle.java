@@ -29,4 +29,11 @@ public class AutoVehicle extends Vehicle {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
+
+    @Override
+    public String toString() {
+        return "AutoVehicle{" +
+                "engine=" + engine +
+                "} " + super.toString();
+    }
 }

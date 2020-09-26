@@ -1,12 +1,14 @@
 package org.alexandraanghel;
 
+import org.alexandraanghel.vehicles.Car;
+
 public class App
 {
     public static void main( String[] args )
     {
 
-       Game game = new Game();
-       game.start();
+//       Game game = new Game();
+//       game.start();
 
 //       //example invoking overloaded methods and constructors
 //       Engine engine = new Engine();
@@ -44,21 +46,23 @@ public class App
 //        autoVhicleEngine.manufacturer ="VW";
 //        autoVhicleEngine.capacity = 3000;
 //        AutoVehicle autoVehicle = new AutoVehicle(autoVhicleEngine);
-//
-//        Engine engine1 = new Engine();
-//        engine1.manufacturer = "Dacia";
-//        engine1.capacity = 1000;
-//
-//        //o instanta a clasei Car
-//       Car carReference = new Car(engine1);
-//       carReference.setName("Dacia");
-//       carReference.setMaxSpeed(180);
-//       carReference.setFuelLevel(70);
-//       carReference.setColor("Red");
-//       carReference.setDamaged(false);
-//       carReference.setDoorCount(4);
-//       carReference.setMileage(10);
-//       carReference.setTotalTraveledDistance(0);
+
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "Dacia";
+        engine1.capacity = 1000;
+
+        //o instanta a clasei Car
+       Car carReference = new Car(engine1);
+       carReference.setName("Dacia");
+       carReference.setMaxSpeed(180);
+       carReference.setFuelLevel(70);
+       carReference.setColor("Red");
+       carReference.setDamaged(false);
+       carReference.setDoorCount(4);
+       carReference.setMileage(10);
+       carReference.setTotalTraveledDistance(0);
+
+        System.out.println(carReference);
 //
 //        System.out.println("Properties of car " + carReference.getName());
 //        System.out.println("Max speed: " + carReference.getMaxSpeed());
