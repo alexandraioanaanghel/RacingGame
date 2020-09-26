@@ -1,4 +1,4 @@
-package org.alexandraanghel;
+package org.alexandraanghel.vehicles;
 
 import java.time.LocalDate;
 
@@ -11,8 +11,10 @@ public class Vehicle {
     private String name;
     private double fuelLevel;
     private double mileage; //consum
-    private double totalTraveledDistance;
-    private double maxSpeed;
+    //accesibil si din orice sub clasa chiar daca nu e in pachetul respectiv
+    protected double totalTraveledDistance;
+    //package private -default accesibil in tot pachetul
+    double maxSpeed;
     private boolean damaged;
     private String color;
 
