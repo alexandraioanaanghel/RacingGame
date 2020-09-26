@@ -7,9 +7,19 @@ public class AutoVehicle extends Vehicle {
     //"has-a" relationship (aggregation)
     private Engine engine;
 
+    //constructor overloading - supraincarcare
+    public AutoVehicle()
+    {
+        //this.engine = new Engine();
+
+        //apelare alt constructor;
+        this(new Engine());
+    }
+
     public AutoVehicle(Engine engine)
     {
         this.engine = engine;
+        System.out.println("Custom constructor");
     }
 
     public Engine getEngine() {

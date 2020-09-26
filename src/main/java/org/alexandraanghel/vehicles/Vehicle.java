@@ -33,6 +33,12 @@ public class Vehicle {
         this.maxSpeed = maxSpeed;
     }
 
+    //method overloading
+    public  double accelerate(double speed)
+    {
+        return accelerate(speed, 1);
+    }
+
     public double accelerate(double speed, double durationInHours)
     {
         if (fuelLevel <=0 || damaged)

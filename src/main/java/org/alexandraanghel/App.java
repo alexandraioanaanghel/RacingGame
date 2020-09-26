@@ -1,12 +1,33 @@
 package org.alexandraanghel;
 
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
 
        Game game = new Game();
        game.start();
+
+//       //example invoking overloaded methods and constructors
+//       Engine engine = new Engine();
+//       engine.setCapacity(1400);
+//       engine.setManufacturer("Dacia");
+//       AutoVehicle autoVehicle = new AutoVehicle(engine);
+//
+//       AutoVehicle autoVehicle2 = new AutoVehicle();
+//
+//       Car c1 = new Car();
+//
+//       autoVehicle.accelerate(100);
+//       autoVehicle2.accelerate(100,3);
+//
+//       autoVehicle.accelerate(10);
+//
+//        System.out.println("Engine capacity " + engine.getCapacity());
+//        System.out.println(engine.getCapacity());
+//        System.out.println(engine);
+
+
 
 //        Vehicle vehicle1 = new Vehicle();
 //        vehicle1.setName("Dacia");
