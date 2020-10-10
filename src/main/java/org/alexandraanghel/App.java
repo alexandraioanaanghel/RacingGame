@@ -1,15 +1,12 @@
 package org.alexandraanghel;
 
-import org.alexandraanghel.vehicles.Vehicle;
-import org.alexandraanghel.vehicles.cheater.CheatingVehicle;
-
 public class App
 {
     public static void main( String[] args )
     {
 
-//       Game game = new Game();
-//       game.start();
+       Game game = new Game();
+       game.start();
 
 //        CheatingVehicle cheatingVehicle = new CheatingVehicle();
 //        cheatingVehicle.setName("Cheater");
@@ -17,11 +14,11 @@ public class App
 //
 //        cheatingVehicle.accelerate(60);
 
-        //polymorphism
-        Vehicle cheatingVehicle = new CheatingVehicle();
-        cheatingVehicle.setName("Cheater");
-        // object type determines method implementation
-        cheatingVehicle.accelerate(60,1);
+//        //polymorphism
+//        Vehicle cheatingVehicle = new CheatingVehicle();
+//        cheatingVehicle.setName("Cheater");
+//        // object type determines method implementation
+//        cheatingVehicle.accelerate(60,1);
 
         // variable type determines what method can be invoked directly
         // nu se poate
@@ -30,10 +27,10 @@ public class App
         //type casting
         //tratere continut variabila si cum ar fi de tipul
         //este o instanta a clasei (instanceof)
-        if (cheatingVehicle instanceof CheatingVehicle)
-        {
-            ((CheatingVehicle)cheatingVehicle).cheat();
-        }
+//        if (cheatingVehicle instanceof CheatingVehicle)
+//        {
+//            ((CheatingVehicle)cheatingVehicle).cheat();
+//        }
 
 //       //example invoking overloaded methods and constructors
 //       Engine engine = new Engine();
