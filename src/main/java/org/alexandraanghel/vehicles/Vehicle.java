@@ -2,6 +2,7 @@ package org.alexandraanghel.vehicles;
 
 import java.time.LocalDate;
 
+//final in fata clasei nu ne mai permite sa mostenim acea clasa
 public class Vehicle {
 
     //class variable/ static variable = o sg val in toata app
@@ -39,6 +40,7 @@ public class Vehicle {
         return accelerate(speed, 1);
     }
 
+    // final la metoda acea medota nu va mai putea fi suprascrisa
     public double accelerate(double speed, double durationInHours)
     {
         if (fuelLevel <=0 || damaged)
@@ -83,6 +85,13 @@ public class Vehicle {
 
         return distance;
 
+    }
+
+    protected Vehicle reset()
+    {
+        totalTraveledDistance = 0;
+        damaged = false;
+        return this;
     }
 
     public void setName(String name)

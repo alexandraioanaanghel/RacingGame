@@ -19,4 +19,12 @@ public class CheatingVehicle extends Vehicle {
     {
         totalTraveledDistance *=2;
     }
+
+    //co-variant return type
+    //method access can be more permissive than in the parent class
+    @Override
+    public CheatingVehicle reset() {
+        super.reset();
+        return this;
+    }
 }
