@@ -1,6 +1,6 @@
 package org.alexandraanghel;
 
-import org.alexandraanghel.vehicles.Car;
+import org.alexandraanghel.vehicles.cheater.CheatingVehicle;
 
 public class App
 {
@@ -9,6 +9,12 @@ public class App
 
 //       Game game = new Game();
 //       game.start();
+
+        CheatingVehicle cheatingVehicle = new CheatingVehicle();
+        cheatingVehicle.setName("Cheater");
+        cheatingVehicle.accelerate(60,1);
+
+        cheatingVehicle.accelerate(60);
 
 //       //example invoking overloaded methods and constructors
 //       Engine engine = new Engine();
@@ -47,22 +53,22 @@ public class App
 //        autoVhicleEngine.capacity = 3000;
 //        AutoVehicle autoVehicle = new AutoVehicle(autoVhicleEngine);
 
-        Engine engine1 = new Engine();
-        engine1.manufacturer = "Dacia";
-        engine1.capacity = 1000;
-
-        //o instanta a clasei Car
-       Car carReference = new Car(engine1);
-       carReference.setName("Dacia");
-       carReference.setMaxSpeed(180);
-       carReference.setFuelLevel(70);
-       carReference.setColor("Red");
-       carReference.setDamaged(false);
-       carReference.setDoorCount(4);
-       carReference.setMileage(10);
-       carReference.setTotalTraveledDistance(0);
-
-        System.out.println(carReference);
+//        Engine engine1 = new Engine();
+//        engine1.manufacturer = "Dacia";
+//        engine1.capacity = 1000;
+//
+//        //o instanta a clasei Car
+//       Car carReference = new Car(engine1);
+//       carReference.setName("Dacia");
+//       carReference.setMaxSpeed(180);
+//       carReference.setFuelLevel(70);
+//       carReference.setColor("Red");
+//       carReference.setDamaged(false);
+//       carReference.setDoorCount(4);
+//       carReference.setMileage(10);
+//       carReference.setTotalTraveledDistance(0);
+//
+//        System.out.println(carReference);
 //
 //        System.out.println("Properties of car " + carReference.getName());
 //        System.out.println("Max speed: " + carReference.getMaxSpeed());
