@@ -16,6 +16,7 @@ public class Game {
 
         String vehicleName = getVehicleNameFromUser();
         System.out.println("Vehicle Name: " + vehicleName);
+
     }
 
     private int getPlayerCountFromUser()
