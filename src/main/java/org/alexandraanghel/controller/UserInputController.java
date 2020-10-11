@@ -6,5 +6,5 @@ public interface UserInputController {
     String getVehicleName();
     int getSelectedTrack();
     double getAccelerationSpeed();
-
+    int getCompetitorType();
 }
