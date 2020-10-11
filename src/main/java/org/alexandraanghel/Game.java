@@ -1,12 +1,14 @@
 package org.alexandraanghel;
 
 import org.alexandraanghel.competitor.Mobile;
-import org.alexandraanghel.utils.ScannerUtils;
 import org.alexandraanghel.competitor.vehicle.Car;
 import org.alexandraanghel.competitor.vehicle.Vehicle;
+import org.alexandraanghel.utils.ScannerUtils;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -15,6 +17,9 @@ public class Game {
 
     private Track[] tracks = new Track[3];
     private List<Mobile> competitors = new ArrayList<>();
+    private boolean winnerNotKnown = true;
+    private Track selectedTrack;
+    private Set<Mobile> outOfRaceCompetitors = new HashSet<>();
 
     public void start()
     {
@@ -22,13 +27,23 @@ public class Game {
 
         initializeTracks();
 
-        Track selectedTrack = getSelectedTrackFromUser();
+        selectedTrack = getSelectedTrackFromUser();
 
         System.out.println("Selected track: " + selectedTrack.toString());
 
         initializeCompetitors();
 
-        playOneRound();
+        loopRounds();
+    }
+
+    private void loopRounds()
+    {
+        while (winnerNotKnown && outOfRaceCompetitors.size() < competitors.size())
+        {
+            playOneRound();
+        }
+
+        //do while
     }
 
     private void playOneRound()
@@ -46,8 +61,23 @@ public class Game {
         for (Mobile competitor : competitors)
         {
             System.out.println("It's " + competitor.getName() + "'s turn");
+
+            if (!competitor.canMove())
+            {
+                System.out.println("Sorry you cannot continue the race...");
+                outOfRaceCompetitors.add(competitor);
+                continue;
+            }
+
             double speed = getAccelerationSpeedFromUser();
             competitor.accelerate(speed, 1);
+
+            if (competitor.getTotalTraveledDistance() >= selectedTrack.getLength() )
+            {
+                System.out.println("The winner is: " + competitor.getName());
+                winnerNotKnown = false;
+                break;
+            }
         }
     }
 
