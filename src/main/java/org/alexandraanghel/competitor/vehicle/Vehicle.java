@@ -1,4 +1,4 @@
-package org.alexandraanghel.vehicles;
+package org.alexandraanghel.competitor.vehicle;
 
 import java.time.LocalDate;
 

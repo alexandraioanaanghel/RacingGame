@@ -1,6 +1,4 @@
-package org.alexandraanghel.vehicles;
-
-import org.alexandraanghel.Engine;
+package org.alexandraanghel.competitor.vehicle;
 
 // "is-a" relationship (inheritance)
 public class Car extends AutoVehicle {

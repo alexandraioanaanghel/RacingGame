@@ -1,8 +1,8 @@
 package org.alexandraanghel;
 
 import org.alexandraanghel.utils.ScannerUtils;
-import org.alexandraanghel.vehicles.Car;
-import org.alexandraanghel.vehicles.Vehicle;
+import org.alexandraanghel.competitor.vehicle.Car;
+import org.alexandraanghel.competitor.vehicle.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;

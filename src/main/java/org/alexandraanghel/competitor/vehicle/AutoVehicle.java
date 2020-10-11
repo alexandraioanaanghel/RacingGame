@@ -1,6 +1,4 @@
-package org.alexandraanghel.vehicles;
-
-import org.alexandraanghel.Engine;
+package org.alexandraanghel.competitor.vehicle;
 
 public abstract class AutoVehicle extends Vehicle {
 

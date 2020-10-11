@@ -1,6 +1,4 @@
-package org.alexandraanghel;
-
-import org.alexandraanghel.vehicles.AutoVehicle;
+package org.alexandraanghel.competitor.vehicle;
 
 public class Mechanic {
 
