@@ -8,6 +8,29 @@ public class App
        Game game = new Game();
        game.start();
 
+//        List<String> favoriteAuthors = new ArrayList<>();
+//        favoriteAuthors.add("Creanga");
+//        favoriteAuthors.add("Paunescu");
+//        favoriteAuthors.add("Eminescu");
+//        favoriteAuthors.add("Barbu");
+//
+//        System.out.println(favoriteAuthors);
+//        boolean barbu = favoriteAuthors.contains("Barbu");
+//        System.out.println(barbu);
+//
+//        int[] integers = {1,2,3,4};
+//
+//        //wrapper classes:  Integer, Double, Float...
+//
+//
+//        //auto-boxing
+//        List<Integer> integerList = Arrays.asList(1,2,3);
+//
+//        Integer fisrtNumber = integerList.get(0);
+//
+//        //auto-unboxing
+//        int secondNumbber = integerList.get(1);
+
 //        String email = "alexandranghel2017@gmail.com";
 //        String[] emailParts = email.split("@");
 //        System.out.println("First part: " + emailParts[0]);
