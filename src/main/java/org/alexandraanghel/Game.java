@@ -1,5 +1,6 @@
 package org.alexandraanghel;
 
+import org.alexandraanghel.competitor.Mobile;
 import org.alexandraanghel.utils.ScannerUtils;
 import org.alexandraanghel.competitor.vehicle.Car;
 import org.alexandraanghel.competitor.vehicle.Vehicle;
@@ -13,7 +14,7 @@ public class Game {
     //ScannerUtils scannerUtils = new ScannerUtils();
 
     private Track[] tracks = new Track[3];
-    private List<Vehicle> competitors = new ArrayList<>();
+    private List<Mobile> competitors = new ArrayList<>();
 
     public void start()
     {
@@ -42,11 +43,11 @@ public class Game {
 //        }
 
         //enhanced for (for-each)
-        for (Vehicle competitor : competitors)
+        for (Mobile competitor : competitors)
         {
             System.out.println("It's " + competitor.getName() + "'s turn");
             double speed = getAccelerationSpeedFromUser();
-            competitor.accelerate(speed);
+            competitor.accelerate(speed, 1);
         }
     }
 

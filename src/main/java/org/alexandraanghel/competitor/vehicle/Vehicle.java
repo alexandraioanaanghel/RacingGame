@@ -1,9 +1,11 @@
 package org.alexandraanghel.competitor.vehicle;
 
+import org.alexandraanghel.competitor.Mobile;
+
 import java.time.LocalDate;
 
 //final in fata clasei nu ne mai permite sa mostenim acea clasa
-public abstract class Vehicle {
+public abstract class Vehicle implements Mobile {
 
     //class variable/ static variable = o sg val in toata app
     private static int totalVehicleCount;
@@ -34,6 +36,11 @@ public abstract class Vehicle {
         this.maxSpeed = maxSpeed;
     }
 
+    @Override
+    public boolean canMove() {
+        return fuelLevel >0 && !damaged;
+    }
+
     //method overloading
     public  double accelerate(double speed)
     {
@@ -43,7 +50,7 @@ public abstract class Vehicle {
     // final la metoda acea medota nu va mai putea fi suprascrisa
     public double accelerate(double speed, double durationInHours)
     {
-        if (fuelLevel <=0 || damaged)
+        if (!canMove())
         {
             System.out.println("You cannot accelerate.");
             return 0;
