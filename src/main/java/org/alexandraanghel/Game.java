@@ -1,6 +1,7 @@
 package org.alexandraanghel;
 
 import org.alexandraanghel.utils.ScannerUtils;
+import org.alexandraanghel.vehicles.Car;
 import org.alexandraanghel.vehicles.Vehicle;
 
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public class Game {
         for (int i =1; i<= playerCount; i++)
         {
             System.out.println("Preparing player: " + i + " for the race");
-            Vehicle vehicle = new Vehicle();
+            Vehicle vehicle = new Car();
             vehicle.setName(getVehicleNameFromUser());
             vehicle.setFuelLevel(30);
             vehicle.setMaxSpeed(300);

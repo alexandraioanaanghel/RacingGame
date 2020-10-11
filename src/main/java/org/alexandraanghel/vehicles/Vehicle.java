@@ -3,7 +3,7 @@ package org.alexandraanghel.vehicles;
 import java.time.LocalDate;
 
 //final in fata clasei nu ne mai permite sa mostenim acea clasa
-public class Vehicle {
+public abstract class Vehicle {
 
     //class variable/ static variable = o sg val in toata app
     private static int totalVehicleCount;

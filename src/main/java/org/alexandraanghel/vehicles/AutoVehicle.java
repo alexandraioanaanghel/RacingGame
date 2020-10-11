@@ -2,7 +2,7 @@ package org.alexandraanghel.vehicles;
 
 import org.alexandraanghel.Engine;
 
-public class AutoVehicle extends Vehicle {
+public abstract class AutoVehicle extends Vehicle {
 
     //"has-a" relationship (aggregation)
     private Engine engine;
