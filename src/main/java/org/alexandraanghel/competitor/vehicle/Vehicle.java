@@ -90,7 +90,6 @@ public abstract class Vehicle implements Mobile {
         fuelLevel -= usedFuel;
         System.out.println("Remaining fuel for vehicle " + name + ": " + fuelLevel);
 
-
         return distance;
 
     }

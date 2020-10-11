@@ -7,6 +7,24 @@ public class App
        Game game = new Game();
        game.start();
 
+//        //String pool
+//        String a = "test";
+//        String b = "test";
+//        String c = new String("test");
+//
+//        System.out.println("a == b " + (a ==b));
+//        System.out.println("a == c " + (a ==c));
+//        System.out.println("a.equals(c) " + a.equals(c));
+
+//        Car car1 = new Car();
+//        car1.setName("Ferrari");
+//
+//        Car car2 = new Car();
+//        car2.setName("Ferrari");
+//
+//        System.out.println("car1 == car2 " + (car1 == car2));
+//        System.out.println(car1.equals(car2));
+
 //        String userLanguage = "en";
 //
 //        //cheie-valoare, chei unice
