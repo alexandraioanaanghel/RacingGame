@@ -1,4 +1,4 @@
-package org.alexandraanghel.utils;
+package org.alexandraanghel.controller.utils;
 
 import java.util.Scanner;
 

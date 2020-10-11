@@ -1,4 +1,4 @@
-package org.alexandraanghel;
+package org.alexandraanghel.domain;
 
 public class Track {
 

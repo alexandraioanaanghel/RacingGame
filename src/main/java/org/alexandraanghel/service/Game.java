@@ -1,12 +1,14 @@
-package org.alexandraanghel;
+package org.alexandraanghel.service;
 
-import org.alexandraanghel.competitor.Mobile;
-import org.alexandraanghel.competitor.MobileComparator;
-import org.alexandraanghel.competitor.vehicle.Car;
-import org.alexandraanghel.competitor.vehicle.Vehicle;
+import org.alexandraanghel.controller.StdinController;
+import org.alexandraanghel.controller.UserInputController;
+import org.alexandraanghel.domain.Track;
+import org.alexandraanghel.domain.competitor.Mobile;
+import org.alexandraanghel.domain.competitor.MobileComparator;
+import org.alexandraanghel.domain.competitor.vehicle.Car;
+import org.alexandraanghel.domain.competitor.vehicle.Vehicle;
 import org.alexandraanghel.persistence.FileRankingRepository;
 import org.alexandraanghel.persistence.RankingsRepository;
-import org.alexandraanghel.utils.ScannerUtils;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -22,6 +24,7 @@ public class Game {
     private Set<Mobile> outOfRaceCompetitors = new HashSet<>();
 
     private RankingsRepository rankingsRepository = new FileRankingRepository();
+    private UserInputController userInputController = new StdinController();
 
     public void start() throws Exception {
         System.out.println("Welcome to the Racing Game!");
@@ -129,14 +132,14 @@ public class Game {
 
     private void initializeCompetitors()
     {
-        int playerCount = getPlayerCountFromUser();
+        int playerCount = userInputController.getPlayerCount();
 
         for (int i =1; i<= playerCount; i++)
         {
             System.out.println("Preparing player: " + i + " for the race");
             Vehicle vehicle = new Car();
-            vehicle.setName(getVehicleNameFromUser());
-            vehicle.setFuelLevel(30);
+            vehicle.setName(userInputController.getVehicleName());
+            vehicle.setFuelLevel(100);
             vehicle.setMaxSpeed(300);
             vehicle.setMileage(ThreadLocalRandom.current().nextDouble(8,15));
 
@@ -150,24 +153,9 @@ public class Game {
 
     }
 
-    private int getPlayerCountFromUser()
-    {
-        System.out.println("Please enter number of players:");
-        //return scannerUtils.nextIntAndMoveToNextLine();
-        return ScannerUtils.nextIntAndMoveToNextLine();
-    }
-
-    private String getVehicleNameFromUser()
-    {
-        System.out.println("Please enter vehicle name:");
-       // return scannerUtils.nextLine();
-        return ScannerUtils.nextLine();
-    }
-
     private Track getSelectedTrackFromUser() throws Exception {
-        System.out.println("Please select a track: ");
         try {
-            int trackNumber = ScannerUtils.nextIntAndMoveToNextLine();
+            int trackNumber = userInputController.getSelectedTrack();
             return tracks[trackNumber - 1];
         } catch (InputMismatchException e) {
             throw  new Exception("You have entered an invalid value.");
@@ -180,9 +168,8 @@ public class Game {
 
     private double getAccelerationSpeedFromUser()
     {
-        System.out.println("Please enter acceleration speed: ");
         try {
-            return ScannerUtils.nextDoubleAndMoveToNextLine();
+            return userInputController.getAccelerationSpeed();
         } catch (InputMismatchException e) {
             System.out.println("Invalid value. Please try again");
             //recursion

@@ -1,4 +1,4 @@
-package org.alexandraanghel.competitor.vehicle;
+package org.alexandraanghel.domain.competitor.vehicle;
 
 public class Mechanic {
 

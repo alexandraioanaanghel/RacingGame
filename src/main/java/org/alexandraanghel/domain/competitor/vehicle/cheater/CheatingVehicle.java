@@ -1,6 +1,6 @@
-package org.alexandraanghel.competitor.vehicle.cheater;
+package org.alexandraanghel.domain.competitor.vehicle.cheater;
 
-import org.alexandraanghel.competitor.vehicle.Vehicle;
+import org.alexandraanghel.domain.competitor.vehicle.Vehicle;
 
 public class CheatingVehicle extends Vehicle {
 

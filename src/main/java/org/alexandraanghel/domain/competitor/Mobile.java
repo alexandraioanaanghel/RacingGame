@@ -1,4 +1,4 @@
-package org.alexandraanghel.competitor;
+package org.alexandraanghel.domain.competitor;
 
 public interface Mobile {
 

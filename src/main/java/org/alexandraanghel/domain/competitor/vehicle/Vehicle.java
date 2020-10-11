@@ -1,6 +1,6 @@
-package org.alexandraanghel.competitor.vehicle;
+package org.alexandraanghel.domain.competitor.vehicle;
 
-import org.alexandraanghel.competitor.Mobile;
+import org.alexandraanghel.domain.competitor.Mobile;
 
 import java.time.LocalDate;
 import java.util.Objects;

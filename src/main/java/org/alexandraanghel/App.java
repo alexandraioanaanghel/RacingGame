@@ -1,5 +1,7 @@
 package org.alexandraanghel;
 
+import org.alexandraanghel.service.Game;
+
 public class App
 {
     public static void main( String[] args ) throws Exception {
