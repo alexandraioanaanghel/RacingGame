@@ -67,7 +67,7 @@ public abstract class Vehicle implements Mobile {
         }
         else
         {
-            System.out.println("Valid speed entered");
+           // System.out.println("Valid speed entered");
         }
 
         System.out.println(name + " is accelerating with " + speed + " km/h for " + durationInHours + " h");
@@ -89,6 +89,8 @@ public abstract class Vehicle implements Mobile {
 
         fuelLevel -= usedFuel;
         System.out.println("Remaining fuel for vehicle " + name + ": " + fuelLevel);
+
+        System.out.println();
 
         return distance;
 
