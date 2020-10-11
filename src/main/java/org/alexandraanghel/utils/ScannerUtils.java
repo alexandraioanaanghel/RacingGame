@@ -8,9 +8,11 @@ public class ScannerUtils {
 
     public static int nextIntAndMoveToNextLine()
     {
-        int integer = SCANNER.nextInt();
-        SCANNER.nextLine();
-        return integer;
+        try {
+            return SCANNER.nextInt();
+        } finally {
+            SCANNER.nextLine();
+        }
     }
 
     public static String nextLine()
@@ -20,9 +22,11 @@ public class ScannerUtils {
 
     public static double nextDoubleAndMoveToNextLine()
     {
-        double value = SCANNER.nextDouble();
-        SCANNER.nextLine();
-        return value;
+        try {
+            return SCANNER.nextDouble();
+        } finally {
+            SCANNER.nextLine();
+        }
     }
 
 }
