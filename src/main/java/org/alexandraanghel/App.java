@@ -2,11 +2,28 @@ package org.alexandraanghel;
 
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
 
-       Game game = new Game();
-       game.start();
+//       Game game = new Game();
+//       game.start();
+
+//        //elemente unicate in set
+//        Set<String> cities = new HashSet<>();
+//        cities.add("Bucuresti");
+//        cities.add("Iasi");
+//
+//        Iterator<String> citiesIterator = cities.iterator();
+//
+//        for (int i = 0; i < cities.size(); i++)
+//        {
+//            String nextCity = citiesIterator.next();
+//            System.out.println(nextCity);
+//        }
+//
+//        while (citiesIterator.hasNext())
+//        {
+//            System.out.println(citiesIterator.next());
+//        }
 
 //        List<String> favoriteAuthors = new ArrayList<>();
 //        favoriteAuthors.add("Creanga");
