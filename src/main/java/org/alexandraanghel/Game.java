@@ -1,12 +1,18 @@
 package org.alexandraanghel;
 
 import org.alexandraanghel.utils.ScannerUtils;
+import org.alexandraanghel.vehicles.Vehicle;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
     //ScannerUtils scannerUtils = new ScannerUtils();
 
     private Track[] tracks = new Track[3];
+    private List<Vehicle> competitors = new ArrayList<>();
 
     public void start()
     {
@@ -18,13 +24,29 @@ public class Game {
 
         System.out.println("Selected track: " + selectedTrack.toString());
 
-        int playerCount = getPlayerCountFromUser();
-        System.out.println("Player count: " +playerCount);
+        initializeCompetitors();
 
+        playOneRound();
+    }
 
-        String vehicleName = getVehicleNameFromUser();
-        System.out.println("Vehicle Name: " + vehicleName);
+    private void playOneRound()
+    {
+        System.out.println("New round.");
 
+//        for (int i =0; i <competitors.size(); i++)
+//        {
+//            Vehicle competitor = competitors.get(i);
+//            System.out.println("It's " + competitor.getName() + "'s turn");
+//            competitor.accelerate(100);
+//        }
+
+        //enhanced for (for-each)
+        for (Vehicle competitor : competitors)
+        {
+            System.out.println("It's " + competitor.getName() + "'s turn");
+            double speed = getAccelerationSpeedFromUser();
+            competitor.accelerate(speed);
+        }
     }
 
     private void initializeTracks()
@@ -58,6 +80,29 @@ public class Game {
        }
     }
 
+    private void initializeCompetitors()
+    {
+        int playerCount = getPlayerCountFromUser();
+
+        for (int i =1; i<= playerCount; i++)
+        {
+            System.out.println("Preparing player: " + i + " for the race");
+            Vehicle vehicle = new Vehicle();
+            vehicle.setName(getVehicleNameFromUser());
+            vehicle.setFuelLevel(30);
+            vehicle.setMaxSpeed(300);
+            vehicle.setMileage(ThreadLocalRandom.current().nextDouble(8,15));
+
+            System.out.println("Fuel level for " + vehicle.getName() + ": " + vehicle.getFuelLevel());
+            System.out.println("Max speed for " + vehicle.getName() + " : " + vehicle.getMaxSpeed());
+            System.out.println("Mileage for " + vehicle.getName() + ": " + vehicle.getMileage());
+            System.out.println();
+
+            competitors.add(vehicle);
+        }
+
+    }
+
     private int getPlayerCountFromUser()
     {
         System.out.println("Please enter number of players:");
@@ -78,6 +123,12 @@ public class Game {
         int trackNumber = ScannerUtils.nextIntAndMoveToNextLine();
 
         return tracks[trackNumber-1];
+    }
+
+    private double getAccelerationSpeedFromUser()
+    {
+        System.out.println("Please enter acceleration speed: ");
+        return ScannerUtils.nextDoubleAndMoveToNextLine();
     }
 
 }

@@ -18,4 +18,11 @@ public class ScannerUtils {
         return SCANNER.nextLine();
     }
 
+    public static double nextDoubleAndMoveToNextLine()
+    {
+        double value = SCANNER.nextDouble();
+        SCANNER.nextLine();
+        return value;
+    }
+
 }
