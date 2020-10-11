@@ -4,6 +4,8 @@ import org.alexandraanghel.competitor.Mobile;
 import org.alexandraanghel.competitor.MobileComparator;
 import org.alexandraanghel.competitor.vehicle.Car;
 import org.alexandraanghel.competitor.vehicle.Vehicle;
+import org.alexandraanghel.persistence.FileRankingRepository;
+import org.alexandraanghel.persistence.RankingsRepository;
 import org.alexandraanghel.utils.ScannerUtils;
 
 import java.util.*;
@@ -18,6 +20,8 @@ public class Game {
     private boolean winnerNotKnown = true;
     private Track selectedTrack;
     private Set<Mobile> outOfRaceCompetitors = new HashSet<>();
+
+    private RankingsRepository rankingsRepository = new FileRankingRepository();
 
     public void start() throws Exception {
         System.out.println("Welcome to the Racing Game!");
@@ -42,7 +46,9 @@ public class Game {
         for (int i =0; i < competitors.size(); i++)
         {
             System.out.println((i+1) + ". " + competitors.get(i).getName() + ": " + competitors.get(i).getTotalTraveledDistance() + " km");
+            rankingsRepository.addRankingItem(i+1, competitors.get(i).getName(), competitors.get(i).getTotalTraveledDistance());
         }
+        rankingsRepository.close();
     }
 
     private void loopRounds()
