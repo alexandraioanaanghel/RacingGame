@@ -1,6 +1,7 @@
 package org.alexandraanghel;
 
 import org.alexandraanghel.competitor.Mobile;
+import org.alexandraanghel.competitor.MobileComparator;
 import org.alexandraanghel.competitor.vehicle.Car;
 import org.alexandraanghel.competitor.vehicle.Vehicle;
 import org.alexandraanghel.utils.ScannerUtils;
@@ -30,6 +31,18 @@ public class Game {
         initializeCompetitors();
 
         loopRounds();
+
+        processRankings();
+    }
+
+    private void processRankings()
+    {
+        competitors.sort(Collections.reverseOrder(new MobileComparator()));
+        System.out.println("Rakings: ");
+        for (int i =0; i < competitors.size(); i++)
+        {
+            System.out.println((i+1) + ". " + competitors.get(i).getName() + ": " + competitors.get(i).getTotalTraveledDistance() + " km");
+        }
     }
 
     private void loopRounds()
