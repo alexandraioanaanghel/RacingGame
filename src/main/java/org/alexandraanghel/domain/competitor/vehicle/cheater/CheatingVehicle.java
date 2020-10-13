@@ -4,7 +4,6 @@ import org.alexandraanghel.domain.competitor.vehicle.Vehicle;
 
 public class CheatingVehicle extends Vehicle {
 
-    //overriding are sens doar in contextul mostenirii
     @Override
     public double accelerate(double speed, double durationInHours) {
         System.out.println(getName() + " is accelerating with " + speed + " km/h for " + durationInHours + " h");

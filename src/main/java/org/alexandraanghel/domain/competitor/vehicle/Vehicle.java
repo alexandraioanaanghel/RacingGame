@@ -5,19 +5,17 @@ import org.alexandraanghel.domain.competitor.Mobile;
 import java.time.LocalDate;
 import java.util.Objects;
 
-//final in fata clasei nu ne mai permite sa mostenim acea clasa
 public abstract class Vehicle implements Mobile {
 
-    //class variable/ static variable = o sg val in toata app
+    //class variable/ static variable
     private static int totalVehicleCount;
     
     // instance variables
     private String name;
     private double fuelLevel;
-    private double mileage; //consum
-    //accesibil si din orice sub clasa chiar daca nu e in pachetul respectiv
+    private double mileage;
     protected double totalTraveledDistance;
-    //package private -default accesibil in tot pachetul
+    //package private -default
     double maxSpeed;
     private boolean damaged;
     private String color;
@@ -48,7 +46,6 @@ public abstract class Vehicle implements Mobile {
         return accelerate(speed, 1);
     }
 
-    // final la metoda acea medota nu va mai putea fi suprascrisa
     public double accelerate(double speed, double durationInHours)
     {
         if (!canMove())

@@ -17,8 +17,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
-    //ScannerUtils scannerUtils = new ScannerUtils();
-
     private Track[] tracks = new Track[3];
     private List<Mobile> competitors = new ArrayList<>();
     private boolean winnerNotKnown = true;

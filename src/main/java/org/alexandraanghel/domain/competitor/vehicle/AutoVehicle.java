@@ -5,12 +5,11 @@ public abstract class AutoVehicle extends Vehicle {
     //"has-a" relationship (aggregation)
     private Engine engine;
 
-    //constructor overloading - supraincarcare
+    //constructor overloading
     public AutoVehicle()
     {
         //this.engine = new Engine();
 
-        //apelare alt constructor;
         this(new Engine());
     }
 
