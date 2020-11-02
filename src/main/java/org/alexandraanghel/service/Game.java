@@ -12,6 +12,7 @@ import org.alexandraanghel.domain.competitor.vehicle.cheater.CheatingVehicle;
 import org.alexandraanghel.persistence.FileRankingRepository;
 import org.alexandraanghel.persistence.RankingsRepository;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -26,7 +27,13 @@ public class Game {
     private RankingsRepository rankingsRepository = new FileRankingRepository();
     private UserInputController userInputController = new StdinController();
 
+    private Date date = new Date();
+
     public void start() throws Exception {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        System.out.println("\nCurrent Date: " + simpleDateFormat.format(date));
+
         System.out.println("\nWelcome to the \"Racing Game\"! \uD83D\uDE97");
         System.out.println();
 
